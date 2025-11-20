@@ -31,6 +31,13 @@ ARXIV_CATEGORIES = ["cs.AI", "cs.LG", "cs.CL"]  # AI, ML, NLP
 MAX_PAPERS_PER_DAY = 5
 SUMMARY_TRUNCATE = 500  # Characters for LLM context
 
+
+# Hacker News settings (Day 3 - NO AUTH NEEDED)
+HN_API_BASE = "https://hacker-news.firebaseio.com/v0"
+HN_SEARCH_API = "https://hn.algolia.com/api/v1"
+MAX_HN_STORIES = 10
+HN_MIN_SCORE = 10  # Minimum upvotes to consider
+
 # =============================================================================
 # Ranking Weights (Day 2+)
 # =============================================================================
@@ -59,11 +66,19 @@ os.makedirs(CHROMA_DIR, exist_ok=True)
 os.makedirs(CODE_DIR, exist_ok=True)
 
 # =============================================================================
+# Hacker News settings (Day 3+ - NO AUTH NEEDED)
+# =============================================================================
+
+HN_SEARCH_API = "https://hn.algolia.com/api/v1"
+MAX_HN_STORIES = 10
+HN_MIN_SCORE = 10  # Minimum upvotes to consider
+
+# =============================================================================
 # Semantic Search Queries (Day 2+)
 # =============================================================================
 
 # Query to find best paper each day
-DAILY_QUERY = "most impactful novel AI technique with practical applications"
+DAILY_QUERY = "most interesting recent AI research paper"
 
 # Alternative queries you can experiment with:
 ALTERNATIVE_QUERIES = {
