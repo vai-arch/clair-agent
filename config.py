@@ -31,7 +31,6 @@ ARXIV_CATEGORIES = ["cs.AI", "cs.LG", "cs.CL"]  # AI, ML, NLP
 MAX_PAPERS_PER_DAY = 5
 SUMMARY_TRUNCATE = 500  # Characters for LLM context
 
-
 # Hacker News settings (Day 3 - NO AUTH NEEDED)
 HN_API_BASE = "https://hacker-news.firebaseio.com/v0"
 HN_SEARCH_API = "https://hn.algolia.com/api/v1"
@@ -73,12 +72,18 @@ HN_SEARCH_API = "https://hn.algolia.com/api/v1"
 MAX_HN_STORIES = 10
 HN_MIN_SCORE = 10  # Minimum upvotes to consider
 
+# Hugging Face settings (Day 4+ - NO AUTH NEEDED)
+# =============================================================================
+
+HF_DAILY_PAPERS_URL = "https://huggingface.co/papers"
+MAX_HF_PAPERS = 10
+
 # =============================================================================
 # Semantic Search Queries (Day 2+)
 # =============================================================================
 
 # Query to find best paper each day
-DAILY_QUERY = "most interesting recent AI research paper"
+DAILY_QUERY = "most impactful novel AI technique with practical applications"
 
 # Alternative queries you can experiment with:
 ALTERNATIVE_QUERIES = {
