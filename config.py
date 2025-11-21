@@ -72,18 +72,12 @@ HN_SEARCH_API = "https://hn.algolia.com/api/v1"
 MAX_HN_STORIES = 10
 HN_MIN_SCORE = 10  # Minimum upvotes to consider
 
-# Hugging Face settings (Day 4+ - NO AUTH NEEDED)
-# =============================================================================
-
-HF_DAILY_PAPERS_URL = "https://huggingface.co/papers"
-MAX_HF_PAPERS = 10
-
 # =============================================================================
 # Semantic Search Queries (Day 2+)
 # =============================================================================
 
 # Query to find best paper each day
-DAILY_QUERY = "most impactful novel AI technique with practical applications"
+DAILY_QUERY = "most interesting recent AI research paper"
 
 # Alternative queries you can experiment with:
 ALTERNATIVE_QUERIES = {
