@@ -31,6 +31,14 @@ ARXIV_CATEGORIES = ["cs.AI", "cs.LG", "cs.CL"]  # AI, ML, NLP
 MAX_PAPERS_PER_DAY = 5
 SUMMARY_TRUNCATE = 500  # Characters for LLM context
 
+# Reddit settings (Day 3+) - WAITING FOR API ACCESS
+REDDIT_CLIENT_ID = "YOUR_CLIENT_ID_HERE"  # From reddit.com/prefs/apps
+REDDIT_CLIENT_SECRET = "YOUR_CLIENT_SECRET_HERE"
+REDDIT_USER_AGENT = "clair-agent/0.1 by YourUsername"
+REDDIT_SUBREDDITS = ["MachineLearning", "LocalLLaMA", "artificial"]
+MAX_REDDIT_POSTS = 10
+REDDIT_ENABLED = False  # Set to True when approved
+
 # Hacker News settings (Day 3 - NO AUTH NEEDED)
 HN_API_BASE = "https://hacker-news.firebaseio.com/v0"
 HN_SEARCH_API = "https://hn.algolia.com/api/v1"
@@ -72,12 +80,25 @@ HN_SEARCH_API = "https://hn.algolia.com/api/v1"
 MAX_HN_STORIES = 10
 HN_MIN_SCORE = 10  # Minimum upvotes to consider
 
+# Hugging Face settings (Day 4+ - NO AUTH NEEDED)
+# =============================================================================
+
+HF_DAILY_PAPERS_URL = "https://huggingface.co/papers"
+MAX_HF_PAPERS = 10
+
+# Twitter/X settings (Day 5+ - NO AUTH, SCRAPING ONLY)
+# =============================================================================
+
+X_SEARCH_QUERIES = ["arxiv.org", "#AI research", "#MachineLearning paper"]
+MAX_X_POSTS = 15
+X_MIN_LIKES = 20  # Minimum likes to consider
+
 # =============================================================================
 # Semantic Search Queries (Day 2+)
 # =============================================================================
 
 # Query to find best paper each day
-DAILY_QUERY = "most interesting recent AI research paper"
+DAILY_QUERY = "most impactful novel AI technique with practical applications"
 
 # Alternative queries you can experiment with:
 ALTERNATIVE_QUERIES = {
