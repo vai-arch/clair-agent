@@ -94,6 +94,20 @@ MAX_X_POSTS = 15
 X_MIN_LIKES = 20  # Minimum likes to consider
 
 # =============================================================================
+# Source Credibility Weights (Day 6+)
+# =============================================================================
+
+# How much to trust each source (0.0 - 1.0)
+SOURCE_CREDIBILITY = {
+    'arxiv': 1.0,      # Academic peer-review = gold standard
+    'huggingface': 0.9, # Expert human curation = very high
+    'hackernews': 0.7   # Technical crowd = good but can be hype-driven
+}
+
+# Signal strength threshold (confidence × avg_credibility)
+MIN_SIGNAL_STRENGTH = 50  # 0-100 scale
+
+# =============================================================================
 # Semantic Search Queries (Day 2+)
 # =============================================================================
 
