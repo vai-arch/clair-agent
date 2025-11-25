@@ -66,11 +66,13 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 THREADS_DIR = os.path.join(BASE_DIR, "threads")
 CHROMA_DIR = os.path.join(BASE_DIR, "chroma_db")
 CODE_DIR = os.path.join(BASE_DIR, "code")
+REPORTS_DIR = os.path.join(BASE_DIR, "reports")
 
 # Create directories if they don't exist
 os.makedirs(THREADS_DIR, exist_ok=True)
 os.makedirs(CHROMA_DIR, exist_ok=True)
 os.makedirs(CODE_DIR, exist_ok=True)
+os.makedirs(REPORTS_DIR, exist_ok=True)
 
 # =============================================================================
 # Hacker News settings (Day 3+ - NO AUTH NEEDED)
