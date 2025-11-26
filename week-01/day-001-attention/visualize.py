@@ -4,10 +4,11 @@ Visualize attention weights as a heatmap.
 
 import sys
 import os
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'src'))
-
 import numpy as np
 import matplotlib.pyplot as plt
+
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src'))
+
 from attention import scaled_dot_product_attention, create_causal_mask
 
 # Set random seed

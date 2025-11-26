@@ -5,9 +5,8 @@ Run: python tests/test_attention.py
 
 import sys
 import os
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src'))
 
-print(os.path.join(os.path.dirname(__file__), '..', 'src'))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src'))
 
 import numpy as np
 from attention import scaled_dot_product_attention, softmax, create_causal_mask

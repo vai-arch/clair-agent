@@ -14,7 +14,6 @@ Where:
 
 import numpy as np
 
-
 def softmax(x, axis=-1):
     """
     Purpose: Computes the softmax probabilities in a numerically stable way. Softmax turns raw scores into a probability distribution (sums to 1).
@@ -29,16 +28,19 @@ def softmax(x, axis=-1):
     
     Args:
         x: Input array
-        axis: Axis along which to compute softmax
+        axis: Axis along which to compute softmax (-1 = last axis of the vector)
     
     Returns:
         Softmax probabilities (sums to 1 along axis)
+        
     """
     # Subtract max for numerical stability (prevents overflow)
+    # Finds the maximum value along the axis you want to apply softmax. keepdims=True keeps the dimensions, so broadcasting works in the next steps.
     x_max = np.max(x, axis=axis, keepdims=True)
+    # Subtracting x_max makes the largest value 0. Exponentials now won’t blow up:
     exp_x = np.exp(x - x_max)
+    # Divide each exp_x by the sum along the axis → probabilities.  
     return exp_x / np.sum(exp_x, axis=axis, keepdims=True)
-
 
 def scaled_dot_product_attention(Q, K, V, mask=None):
     """
@@ -57,7 +59,9 @@ def scaled_dot_product_attention(Q, K, V, mask=None):
         output: Attention output, shape (batch_size, seq_len_q, d_v)
         attention_weights: Attention probabilities, shape (batch_size, seq_len_q, seq_len_k)
     """
-    # Get dimension of keys for scaling
+    # Get dimension of keys for scaling. 
+    # The .shape attribute of an array or tensor returns a tuple representing the dimensions of the array.
+    # Using -1 as an index means “the last element” in a sequence or tuple.
     d_k = Q.shape[-1]
     
     # Step 1: Compute attention scores (QK^T)
