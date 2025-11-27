@@ -1,0 +1,55 @@
+Basic Examples
+--------------
+Hello, world!
+The quick brown fox jumps over the lazy dog.
+LLMs are transformers that process tokens, not words.
+
+Common Words vs Rare Words
+--------------------------
+cat
+unhappiness
+antidisestablishmentarianism
+
+Numbers
+-------
+1
+123
+1234567890
+3.14159
+
+Code Snippets
+-------------
+def hello(): print("world")
+x = [i for i in range(10)]
+import numpy as np
+
+URLs and Emails
+---------------
+https://www.example.com/path/to/page
+user@example.com
+
+Special Characters
+------------------
+Hello! How are you?
+Cost: $99.99
+Temperature: 72°F
+
+Emojis
+------
+Hello 👋 World 🌍
+I love AI 🤖 and Python 🐍
+
+Multilingual
+------------
+Hello (English)
+Bonjour (French)
+こんにちは (Japanese)
+你好 (Chinese)
+مرحبا (Arabic)
+
+Tricky Cases
+------------
+strawberry
+ChatGPT
+GPT-4
+Ph.D.
